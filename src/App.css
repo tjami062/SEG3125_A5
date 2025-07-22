@@ -1,0 +1,78 @@
+
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  min-height: 100vh;
+}
+
+/* Logo Styling */
+.logo {
+  height: 5rem;
+  padding: 1rem;
+  transition: filter 300ms ease-in-out;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1rem #007bff99);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 1rem #61dafbaa);
+}
+
+/* Logo spin animation for subtle branding */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card Base Style */
+.card {
+  background: #1e1e1e;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 123, 255, 0.2);
+}
+
+/* Utility text */
+.read-the-docs {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  .logo {
+    height: 4rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
